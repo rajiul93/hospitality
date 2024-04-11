@@ -13,9 +13,12 @@ import { app } from "../Firebase/firebase.config";
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
+
+
   const auth = getAuth(app);
   const googleProvider = new GoogleAuthProvider();
   const [user, setUser] = useState({});
+  
 
   const googleLogin = () => {
    return signInWithPopup(auth, googleProvider);

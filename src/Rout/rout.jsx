@@ -7,6 +7,7 @@ import Home from "../Page/Home/Home";
 import Login from "../Page/Login/Login";
 import Profile from "../Page/Profile/Profile";
 import Registration from "../Page/Registration/Registration";
+import PrivetRout from "./PrivetRout/PrivetRout";
 
 export const router = createBrowserRouter([
     {
@@ -38,7 +39,7 @@ export const router = createBrowserRouter([
         
         {
             path:'/details/:id',
-            element:<Details/>,
+            element:<PrivetRout> <Details/></PrivetRout> ,
             loader:()=>fetch(`/data2.json`)
         }
       ],

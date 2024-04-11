@@ -2,11 +2,13 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { FaGithub } from "react-icons/fa6";
 import { IoLogoGoogleplus, IoLogoTwitter } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
   const { loginWithEmail,googleLogin ,user} = useContext(AuthContext);
+  const navigate = useNavigate()
+  const location = useLocation()
   const {
     register,
     handleSubmit,
@@ -18,6 +20,8 @@ const Login = () => {
     loginWithEmail(email, password)
       .then(() => {
         toast.success("Login Successfully ");
+      navigate(location?.state ? location.state : "/profile");
+
       })
       .catch(() => {
         toast.warn("You have wrong password");
@@ -28,6 +32,7 @@ const Login = () => {
     googleLogin()
     .then(() => {
       toast.success("Login Successfully ");
+      navigate(location?.state ? location.state : "/profile");
     })
     .catch(() => {
       toast.warn("You have wrong password");
