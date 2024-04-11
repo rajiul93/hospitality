@@ -1,0 +1,46 @@
+import { createBrowserRouter } from "react-router-dom";
+import Blog from "../Page/Blog/Blog";
+import Details from "../Page/Details/Details";
+import Root from "../Page/Details/Root/Root";
+import ErrorPage from "../Page/Error/ErrorPage";
+import Home from "../Page/Home/Home";
+import Login from "../Page/Login/Login";
+import Profile from "../Page/Profile/Profile";
+import Registration from "../Page/Registration/Registration";
+
+export const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Root />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+            path:"/blog",
+            element: <Blog/>
+        },
+        {
+            path:"/profile",
+            element:<Profile/>
+        },
+        {
+            path:'/login',
+            element:<Login/>
+        },
+        
+        {
+            path:'/registration',
+            element:<Registration/>
+        },
+        
+        {
+            path:'/details/:id',
+            element:<Details/>,
+            loader:()=>fetch(`/data2.json`)
+        }
+      ],
+    },
+  ])

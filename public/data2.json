@@ -1,0 +1,82 @@
+[
+   
+        {
+          "id": 1,
+          "category": "Hotel ",
+          "estate_title": "City Center Hotel",
+          "segment_name": "Standard Room",
+          "description": "Convenient and affordable accommodation in the heart of the city.",
+          "price": 80,
+          "status": "rent",
+          "area": "300 sq ft",
+          "location": "City Center",
+          "facilities": ["Free Wi-Fi", "Parking", "24-hour Front Desk"],
+          "image": "https://i.ibb.co/R4nj6JL/Motel-Nacht.webp"
+        }, 
+        {
+            "id": 2,
+            "category": "Motel",
+            "estate_title": "City Center Motel",
+            "segment_name": "Standard Room",
+            "description": "Convenient and affordable accommodation in the heart of the city.",
+            "price": 80,
+            "status": "rent",
+            "area": "300 sq ft",
+            "location": "City Center",
+            "facilities": ["Free Wi-Fi", "Parking", "24-hour Front Desk"],
+            "image": "https://i.ibb.co/nLySJ8R/istockphoto-102550404-612x612.jpg"
+          }, 
+        {
+          "id": 3,
+          "category": "Resort",
+          "estate_title": "Tropical Paradise Resort",
+          "segment_name": "Beachfront Villa",
+          "description": "Escape to a secluded paradise with stunning ocean views.",
+          "price": 500,
+          "status": "sale",
+          "area": "5000 sq ft",
+          "location": "Tropical Island",
+          "facilities": ["Private Beach Access", "Spa", "Outdoor Activities", "Restaurant"],
+          "image": "https://i.ibb.co/98GxgKS/3.jpg"
+        },
+        {
+          "id": 4,
+          "category": "Vacation",
+          "estate_title": "Beachfront Villa",
+          "segment_name": "Luxury Retreat",
+          "description": "Indulge in luxury with a private villa steps away from the beach.",
+          "price": 700,
+          "status": "rent",
+          "area": "4000 sq ft",
+          "location": "Coastal Area",
+          "facilities": ["Infinity Pool", "Private Chef", "Housekeeping", "Beach Access"],
+          "image": "https://i.ibb.co/D52wth8/4.jpg"
+        },
+        {
+          "id": 5,
+          "category": "Lodges",
+          "estate_title": "Forest Retreat Lodge",
+          "segment_name": "Secluded Cabin",
+          "description": "Immerse yourself in nature with a peaceful stay in the forest.",
+          "price": 300,
+          "status": "rent",
+          "area": "2000 sq ft",
+          "location": "Wooded Area",
+          "facilities": ["Nature Trails", "Campfire Area", "Wildlife Observation"],
+          "image": "https://i.ibb.co/9842YHv/5.jpg"
+        },
+        {
+          "id": 6,
+          "category": "Guesthouse",
+          "estate_title": "Downtown Guesthouse",
+          "segment_name": "Urban Retreat",
+          "description": "Experience urban living with comfort and convenience in this guesthouse.",
+          "price": 120,
+          "status": "rent",
+          "area": "1500 sq ft",
+          "location": "City Center",
+          "facilities": ["Shared Kitchen", "Common Lounge", "Free Wi-Fi"],
+          "image": "https://i.ibb.co/Xs1mq4B/6.jpg"
+        }
+  ]
+  

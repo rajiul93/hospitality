@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-one{
+    font-family: "Mochiy Pop P One", sans-serif;
+}
+.main-font{
+    font-family: "Jost", sans-serif;
+}

@@ -1,0 +1,344 @@
+{
+    "hospitality_properties": [
+      {
+        "category": "hotel",
+        "properties": [
+          {
+            "id": 1,
+            "estate_title": "Luxury Hotel Downtown",
+            "segment_name": "Deluxe",
+            "description": "Experience unparalleled luxury in the heart of the city.",
+            "price": 300,
+            "status": "sale",
+            "area": "3000 sq ft",
+            "location": "Downtown",
+            "facilities": ["Swimming Pool", "Gym", "Spa", "Restaurant"],
+            "thumbnail_image": "path/to/thumbnail/image.jpg",
+            "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+          }, {
+            "id": 2,
+            "estate_title": "Luxury Hotel Downtown",
+            "segment_name": "Deluxe",
+            "description": "Experience unparalleled luxury in the heart of the city.",
+            "price": 300,
+            "status": "sale",
+            "area": "3000 sq ft",
+            "location": "Downtown",
+            "facilities": ["Swimming Pool", "Gym", "Spa", "Restaurant"],
+            "thumbnail_image": "path/to/thumbnail/image.jpg",
+            "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+          }, {
+            "id": 3,
+            "estate_title": "Luxury Hotel Downtown",
+            "segment_name": "Deluxe",
+            "description": "Experience unparalleled luxury in the heart of the city.",
+            "price": 300,
+            "status": "sale",
+            "area": "3000 sq ft",
+            "location": "Downtown",
+            "facilities": ["Swimming Pool", "Gym", "Spa", "Restaurant"],
+            "thumbnail_image": "path/to/thumbnail/image.jpg",
+            "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+          }, {
+            "id": 4,
+            "estate_title": "Luxury Hotel Downtown",
+            "segment_name": "Deluxe",
+            "description": "Experience unparalleled luxury in the heart of the city.",
+            "price": 300,
+            "status": "sale",
+            "area": "3000 sq ft",
+            "location": "Downtown",
+            "facilities": ["Swimming Pool", "Gym", "Spa", "Restaurant"],
+            "thumbnail_image": "path/to/thumbnail/image.jpg",
+            "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+          }
+        ]
+      },
+      {
+        "category": "resort",
+        "properties": [
+            {
+                "id": 5,
+                "estate_title": "Tropical Paradise Resort",
+                "segment_name": "Beachfront Villa",
+                "description": "Escape to a secluded paradise with stunning ocean views.",
+                "price": 500,
+                "status": "sale",
+                "area": "5000 sq ft",
+                "location": "Tropical Island",
+                "facilities": ["Private Beach Access", "Spa", "Outdoor Activities", "Restaurant"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 6,
+                "estate_title": "Mountain Retreat Resort",
+                "segment_name": "Chalet",
+                "description": "Embrace nature's beauty with cozy chalets nestled in the mountains.",
+                "price": 400,
+                "status": "rent",
+                "area": "3500 sq ft",
+                "location": "Mountain Range",
+                "facilities": ["Hiking Trails", "Skiing", "Spa", "Restaurant"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 7,
+                "estate_title": "Island Resort Retreat",
+                "segment_name": "Seaside Bungalow",
+                "description": "Unwind in a cozy seaside bungalow with panoramic island views.",
+                "price": 450,
+                "status": "sale",
+                "area": "3800 sq ft",
+                "location": "Island Getaway",
+                "facilities": ["Oceanfront Deck", "Water Sports", "Tropical Gardens"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 8,
+                "estate_title": "Lakeside Resort Oasis",
+                "segment_name": "Lakeview Cabin",
+                "description": "Experience tranquility by the lake in a charming cabin retreat.",
+                "price": 380,
+                "status": "rent",
+                "area": "3200 sq ft",
+                "location": "Lake District",
+                "facilities": ["Lakeview Terrace", "Fishing Pier", "Fire Pit"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              }
+        ]
+      },
+      {
+        "category": "vacation rentals",
+        "properties": [
+            {
+                "id": 1,
+                "estate_title": "Seaside Escape Villa",
+                "segment_name": "Beachfront Oasis",
+                "description": "Relax and unwind in this luxurious beachfront villa with panoramic ocean views.",
+                "price": 400,
+                "status": "sale",
+                "area": "3000 sq ft",
+                "location": "Tropical Island",
+                "facilities": ["Private Pool", "Direct Beach Access", "Outdoor Dining Area"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 2,
+                "estate_title": "Mountain Retreat Chalet",
+                "segment_name": "Ski-in/Ski-out Lodge",
+                "description": "Experience the ultimate mountain getaway in this cozy ski-in/ski-out chalet.",
+                "price": 350,
+                "status": "rent",
+                "area": "2500 sq ft",
+                "location": "Mountain Resort",
+                "facilities": ["Hot Tub", "Fireplace", "Game Room"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 3,
+                "estate_title": "Lakefront Cabin Retreat",
+                "segment_name": "Rustic Hideaway",
+                "description": "Escape to the tranquility of the lake in this charming rustic cabin retreat.",
+                "price": 300,
+                "status": "sale",
+                "area": "2000 sq ft",
+                "location": "Lakeside",
+                "facilities": ["Private Dock", "Kayaks", "Outdoor Fire Pit"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 4,
+                "estate_title": "Countryside Cottage Getaway",
+                "segment_name": "Scenic Farmhouse",
+                "description": "Experience the charm of the countryside in this picturesque farmhouse getaway.",
+                "price": 250,
+                "status": "rent",
+                "area": "1800 sq ft",
+                "location": "Rural Countryside",
+                "facilities": ["Garden Terrace", "Farm-to-Table Dining", "Outdoor BBQ Area"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              }
+        ]
+      },
+      {
+        "category": "lodges",
+        "properties": [
+            {
+                "id": 13,
+                "estate_title": "Riverside Retreat Lodge",
+                "segment_name": "Nature Cabin",
+                "description": "Experience serenity by the river in this charming cabin retreat.",
+                "price": 250,
+                "status": "sale",
+                "area": "2000 sq ft",
+                "location": "Riverside",
+                "facilities": ["Riverfront Deck", "Hiking Trails", "Fire Pit"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 14,
+                "estate_title": "Mountain View Lodge",
+                "segment_name": "Cozy Chalet",
+                "description": "Embrace the stunning mountain views in this cozy chalet retreat.",
+                "price": 300,
+                "status": "rent",
+                "area": "2500 sq ft",
+                "location": "Mountain Range",
+                "facilities": ["Scenic Balcony", "Skiing", "Hot Tub"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 15,
+                "estate_title": "Forest Haven Lodge",
+                "segment_name": "Secluded Cabin",
+                "description": "Escape to the tranquility of the forest in this secluded cabin hideaway.",
+                "price": 200,
+                "status": "sale",
+                "area": "1800 sq ft",
+                "location": "Wooded Area",
+                "facilities": ["Forest Trails", "Campfire Area", "Wildlife Viewing"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 16,
+                "estate_title": "Lakefront Lodge Retreat",
+                "segment_name": "Lakeside Cabin",
+                "description": "Enjoy picturesque lake views in this cozy cabin retreat by the water.",
+                "price": 350,
+                "status": "rent",
+                "area": "2200 sq ft",
+                "location": "Lakeside",
+                "facilities": ["Lakefront Deck", "Fishing Pier", "Canoe Rental"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              }
+        ]
+      },
+      {
+        "category": "guesthouse",
+        "properties": [
+            {
+                "id": 17,
+                "estate_title": "Cozy Corner Guesthouse",
+                "segment_name": "Quaint Retreat",
+                "description": "Experience warm hospitality in this charming and cozy guesthouse.",
+                "price": 100,
+                "status": "sale",
+                "area": "1500 sq ft",
+                "location": "Suburban Area",
+                "facilities": ["Garden Patio", "Homemade Breakfast", "Free Wi-Fi"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 18,
+                "estate_title": "Seaside Serenity Guesthouse",
+                "segment_name": "Oceanfront Escape",
+                "description": "Relax by the sea in this serene guesthouse with stunning ocean views.",
+                "price": 120,
+                "status": "rent",
+                "area": "1800 sq ft",
+                "location": "Coastal Town",
+                "facilities": ["Oceanfront Terrace", "Beach Access", "Bicycle Rental"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 19,
+                "estate_title": "Urban Oasis Guesthouse",
+                "segment_name": "City Retreat",
+                "description": "Escape the hustle and bustle in this urban oasis guesthouse.",
+                "price": 150,
+                "status": "sale",
+                "area": "2000 sq ft",
+                "location": "City Center",
+                "facilities": ["Courtyard Garden", "Local Excursions", "Free Parking"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 20,
+                "estate_title": "Historic Charm Guesthouse",
+                "segment_name": "Heritage Stay",
+                "description": "Experience the charm of history in this beautifully restored guesthouse.",
+                "price": 130,
+                "status": "rent",
+                "area": "1700 sq ft",
+                "location": "Historic District",
+                "facilities": ["Antique Decor", "Complimentary Breakfast", "Walking Tours"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              }
+        ]
+      },
+      {
+        "category": "boutique hotel",
+        "properties": [
+            {
+                "id": 21,
+                "estate_title": "Vintage Elegance Boutique Hotel",
+                "segment_name": "Classic Suite",
+                "description": "Step into a world of vintage charm and elegance in this boutique hotel.",
+                "price": 250,
+                "status": "sale",
+                "area": "1800 sq ft",
+                "location": "Historic District",
+                "facilities": ["Art Deco Decor", "Fine Dining Restaurant", "Concierge Service"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 22,
+                "estate_title": "Urban Chic Boutique Hotel",
+                "segment_name": "Designer Loft",
+                "description": "Experience contemporary style and luxury in this urban chic boutique hotel.",
+                "price": 300,
+                "status": "rent",
+                "area": "2000 sq ft",
+                "location": "City Center",
+                "facilities": ["Modern Design", "Rooftop Bar", "Fitness Center"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 23,
+                "estate_title": "Bohemian Retreat Boutique Hotel",
+                "segment_name": "Artsy Hideaway",
+                "description": "Escape to a bohemian oasis of creativity and relaxation in this boutique hotel.",
+                "price": 280,
+                "status": "sale",
+                "area": "1600 sq ft",
+                "location": "Artsy Neighborhood",
+                "facilities": ["Eclectic Decor", "Art Gallery", "Yoga Studio"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              },
+              {
+                "id": 24,
+                "estate_title": "Tranquil Haven Boutique Hotel",
+                "segment_name": "Peaceful Retreat",
+                "description": "Indulge in tranquility and relaxation in this serene boutique hotel.",
+                "price": 270,
+                "status": "rent",
+                "area": "1900 sq ft",
+                "location": "Scenic Countryside",
+                "facilities": ["Nature-inspired Design", "Spa", "Outdoor Meditation Area"],
+                "thumbnail_image": "path/to/thumbnail/image.jpg",
+                "image_slider": ["path/to/image1.jpg", "path/to/image2.jpg", "path/to/image3.jpg"]
+              }
+        ]
+      }
+    ]
+  }
+  
