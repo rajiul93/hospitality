@@ -1,10 +1,59 @@
 import { useContext, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 import { AuthContext } from "../../Provider/AuthProvider";
-
 const Profile = () => {
-  const { user } = useContext(AuthContext);
+    // const auth = getAuth(app);
+  const { user, updateName,updatePhoto, setUser } = useContext(AuthContext);
   const [show, setShow] = useState(false);
+
+
+  const updateUserName = async (e) => {
+    e.preventDefault();
+    const name =  e.target.name.value;
+    if (!name.length) {
+        toast.warning('You should enter your new name')
+      return
+    }
+    try {
+        await updateName(name)
+        setUser({
+            ...user,
+            displayName:name,
+        });
+        e.target.name.value =""
+    } catch (error) {
+        console.error('Failed to update profile:', error);
+    }
+  };
+
+  const updateUserPhoto = async (e) => {
+    e.preventDefault();
+    const image =  e.target.image.value;
+    if (!image.length) {
+        toast.warning('You should enter your new image url')
+      return
+    }
+    try {
+        await updatePhoto(image)
+        setUser({
+            ...user,
+            photoURL:image,
+
+        });
+        e.target.image.value =""
+    } catch (error) {
+        console.error('Failed to update profile:', error);
+    }
+  };
+
+
+
+  
   return (
+
+<>
+<ToastContainer />
+
     <div className="my-14 grid grid-cols-1 md:grid-cols-6">
       <div className="col-span-2">
         <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
@@ -45,11 +94,13 @@ const Profile = () => {
       </div>
       <div className="col-span-4">
         <div>
-          <h1 className="text-2xl font-bold font-one mb-8 text-primary">Welcome</h1>
+          <h1 className="text-2xl font-bold font-one mb-8 text-primary">
+            Welcome
+          </h1>
           <p className="">
             Welcome to our resort website! We’re thrilled to have you here. As
             you step into our digital world, prepare to be immersed in a realm
-            of relaxation, luxury, and unforgettable experiences. Whether you're
+            of relaxation, luxury, and unforgettable experiences. Whether you are
             planning a romantic getaway, a family vacation, or a solo adventure,
             our resort offers something special for everyone. Browse through our
             breathtaking accommodations, world-class amenities, and exciting
@@ -59,8 +110,33 @@ const Profile = () => {
             our site and let your journey begin!
           </p>
         </div>
+
+        <div>
+          <h1 className="text-2xl mt-8">Update Profile</h1>
+          <form onSubmit={updateUserName} className="flex gap-3 mt-4">
+            <label className="input input-bordered flex items-center gap-2">
+              <input
+                name="name"
+                type="text"
+                className="grow"
+                placeholder="Name"
+              />
+            </label>
+            <button type="submit" className="btn">
+              Update Name
+            </button>
+          </form>
+          <form onSubmit={updateUserPhoto} className="flex gap-3 mt-4">
+            <label className="input input-bordered flex items-center gap-2">
+              <input name="image" type="text" className="grow" placeholder="photoURL" />
+            </label>
+            <button type="submit" className="btn">Update Image</button>
+          </form>
+        </div>
       </div>
     </div>
+</>
+
   );
 };
 
