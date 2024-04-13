@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { ToastContainer, toast } from 'react-toastify';
 import { AuthContext } from "../../Provider/AuthProvider";
 const Profile = () => {
@@ -52,6 +53,11 @@ const Profile = () => {
   return (
 
 <>
+<Helmet>
+    <title>
+    VoyageVista | Profile
+    </title>
+</Helmet>
 <ToastContainer />
 
     <div className="my-14 grid grid-cols-1 md:grid-cols-6">
@@ -94,7 +100,7 @@ const Profile = () => {
       </div>
       <div className="col-span-4">
         <div>
-          <h1 className="text-2xl font-bold font-one mb-8 text-primary">
+          <h1 data-aos="zoom-in-down" className="text-2xl font-bold font-one mb-8 text-primary">
             Welcome
           </h1>
           <p className="">
@@ -111,9 +117,9 @@ const Profile = () => {
           </p>
         </div>
 
-        <div>
-          <h1 className="text-2xl mt-8">Update Profile</h1>
-          <form onSubmit={updateUserName} className="flex gap-3 mt-4">
+        <div >
+          <h1 data-aos-delay="200"  data-aos="fade-up-right" className="text-2xl mt-8">Update Profile</h1>
+          <form data-aos-delay="250"  data-aos="fade-up-right"  onSubmit={updateUserName} className="flex gap-3 mt-4">
             <label className="input input-bordered flex items-center gap-2">
               <input
                 name="name"
@@ -122,15 +128,15 @@ const Profile = () => {
                 placeholder="Name"
               />
             </label>
-            <button type="submit" className="btn">
+            <button type="submit" className="btn text-primary hover:text-white hover:bg-primary">
               Update Name
             </button>
           </form>
-          <form onSubmit={updateUserPhoto} className="flex gap-3 mt-4">
+          <form data-aos-delay="200"  data-aos="fade-up-right"  onSubmit={updateUserPhoto} className="flex gap-3 mt-4">
             <label className="input input-bordered flex items-center gap-2">
               <input name="image" type="text" className="grow" placeholder="photoURL" />
             </label>
-            <button type="submit" className="btn">Update Image</button>
+            <button type="submit" className="btn text-primary hover:text-white hover:bg-primary ">Update Image</button>
           </form>
         </div>
       </div>

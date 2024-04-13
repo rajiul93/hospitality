@@ -18,9 +18,9 @@ const CardContainerOne = () => {
           blanditiis praesentium voluptatum deleniti atque corrupti quos dolores{" "}
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center  ">
         {data.map((item) => (
-          <CardOne key={item.id}  item={item}/>
+          <CardOne  key={item.id}  item={item}/>
         ))}
       </div>
     </div>

@@ -1,5 +1,7 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 import { Link } from "react-router-dom";
-
 const CardOne = ({ item }) => {
   const {
     category,
@@ -12,9 +14,15 @@ const CardOne = ({ item }) => {
     location,
     id
   } = item;
+
+
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init();
+}, []);
   return (
-    <div>
-      <div className="flex flex-col max-w-lg  overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800 border">
+    <div data-aos="fade-up-right"  className="flex flex-col bg-white shadow rounded p-4 h-full ">
+      <div  className="flex flex-col max-w-lg  overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800 border h-full">
         <div className="space-y-2">
 
           <img
