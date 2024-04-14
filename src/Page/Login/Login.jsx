@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Swal from 'sweetalert2';
 import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
-  const { loginWithEmail,googleLogin ,user} = useContext(AuthContext);
+  const { loginWithEmail,googleLogin ,user,loginWithGitHub} = useContext(AuthContext);
   const navigate = useNavigate()
   const location = useLocation()
   const {
@@ -49,8 +49,26 @@ const Login = () => {
     .catch(() => {
       toast.warn("You have wrong password");
     });
-  }
-console.log(user);
+  } 
+
+const gitLogin =()=>{
+  loginWithGitHub()
+  .then(() => {
+    toast.success("Login Successfully ");
+    Swal.fire({
+      title: 'success',
+        text: 'Welcome Voyage Vista',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    })
+    navigate(location?.state ? location.state : "/profile");
+  })
+  .catch(() => {
+    toast.warn("something wrong github");
+  });
+
+}
+
   return (
     <div className="w-full max-w-xl mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 font-one">
       <ToastContainer />
@@ -107,7 +125,7 @@ console.log(user);
           <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
             <IoLogoTwitter className="text-2xl" />
           </button>
-          <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
+          <button onClick={gitLogin} aria-label="Log in with GitHub" className="p-3 rounded-sm">
             <FaGithub className="text-2xl" />
           </button>
         </div>

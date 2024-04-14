@@ -1,4 +1,5 @@
 import {
+  GithubAuthProvider,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   getAuth,
@@ -8,44 +9,45 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
+
 import { createContext, useEffect, useState } from "react";
 import { app } from "../Firebase/firebase.config";
 
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-
+  const gitHubProvider = new GithubAuthProvider();
 
   const auth = getAuth(app);
   const googleProvider = new GoogleAuthProvider();
   const [user, setUser] = useState({});
 
-
   const googleLogin = () => {
-   return signInWithPopup(auth, googleProvider);
+    return signInWithPopup(auth, googleProvider);
+  };
+  const loginWithGitHub = () => {
+    return signInWithPopup(auth, gitHubProvider);
+  };
+  const createWithEmailPassword = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
-const createWithEmailPassword =(email, password)=>{
-  return createUserWithEmailAndPassword(auth, email, password);
-}
-
-const loginWithEmail=(email,password)=>{
-  return signInWithEmailAndPassword(auth, email, password);
-}
-  const logOut =()=>{
-    return signOut(auth)
-  
-  }
-const updateName = (name)=>{
-  return updateProfile(auth.currentUser, {
-    displayName: name
-  })
-}
-const updatePhoto = (image)=>{
-  return updateProfile(auth.currentUser, {
-    photoURL: image
-  })
-}
+  const loginWithEmail = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+  const logOut = () => {
+    return signOut(auth);
+  };
+  const updateName = (name) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+    });
+  };
+  const updatePhoto = (image) => {
+    return updateProfile(auth.currentUser, {
+      photoURL: image,
+    });
+  };
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
@@ -63,7 +65,8 @@ const updatePhoto = (image)=>{
     loginWithEmail,
     setUser,
     updateName,
-    updatePhoto
+    updatePhoto,
+    loginWithGitHub,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

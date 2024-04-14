@@ -4,15 +4,19 @@ import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { IoLogoGoogleplus, IoLogoTwitter } from "react-icons/io";
+import { useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { app } from "../../Firebase/firebase.config";
 import { AuthContext } from "../../Provider/AuthProvider";
+
+import Swal from 'sweetalert2';
 const Registration = () => {
   const auth = getAuth(app);
-  const { googleLogin, user, createWithEmailPassword } = useContext(AuthContext);
+  const { googleLogin, user, createWithEmailPassword ,loginWithGitHub} = useContext(AuthContext);
 
-  console.log(user);
+  const navigate = useNavigate()
+  const location = useLocation()
   const [showEye, setShowEye] = useState(false);
 
   const {
@@ -62,7 +66,23 @@ const Registration = () => {
       })
       .catch((e) => console.log(e.message));
   };
-
+  const gitLogin =()=>{
+    loginWithGitHub()
+    .then(() => {
+      toast.success("Login Successfully ");
+      Swal.fire({
+        title: 'success',
+          text: 'Welcome Voyage Vista',
+          icon: 'success',
+          confirmButtonText: 'OK'
+      })
+      navigate(location?.state ? location.state : "/profile");
+    })
+    .catch(() => {
+      toast.warn("something wrong github");
+    });
+  
+  }
   return (
     <div className="w-full max-w-xl mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 font-one">
       <ToastContainer />
@@ -183,7 +203,7 @@ const Registration = () => {
           <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
             <IoLogoTwitter className="text-2xl" />
           </button>
-          <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
+          <button onClick={gitLogin} aria-label="Log in with GitHub" className="p-3 rounded-sm">
             <FaGithub className="text-2xl" />
           </button>
         </div>
