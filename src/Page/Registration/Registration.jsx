@@ -51,8 +51,14 @@ const Registration = () => {
           photoURL: photo,
         })
           .then(() => {
-            // Profile updated!
-            // ...
+            toast.success("Login Successfully ");
+      Swal.fire({
+        title: 'success',
+          text: 'Welcome Voyage Vista',
+          icon: 'success',
+          confirmButtonText: 'OK'
+      })
+      navigate(location?.state ? location.state : "/profile");
           })
           .catch((e) => console.log(e.message));
       })
@@ -60,11 +66,19 @@ const Registration = () => {
   };
   const googleRegistration = () => {
     googleLogin()
-      .then((result) => {
-        const user = result.user;
-        console.log("user", user);
+    .then(() => {
+      toast.success("Login Successfully ");
+      Swal.fire({
+        title: 'success',
+          text: 'Welcome Voyage Vista',
+          icon: 'success',
+          confirmButtonText: 'OK'
       })
-      .catch((e) => console.log(e.message));
+      navigate(location?.state ? location.state : "/profile");
+    })
+    .catch(() => {
+      toast.warn("something wrong github");
+    });
   };
   const gitLogin =()=>{
     loginWithGitHub()
