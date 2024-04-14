@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet-async";
+import Achievement from "../../Share/Achievement";
 import CardContainerOne from "../../Share/CardContainerOne";
+import GoodReviews from "../../Share/GoodReviews";
 import MainSlider from "../../Share/MainSlider/MainSlider";
 
  
@@ -10,7 +12,9 @@ const Home = () => {
             <title>VoyageVista | Home</title>
           </Helmet>
       <MainSlider/>
+      <Achievement/>
       <CardContainerOne/>
+      <GoodReviews/>
         </div>
     );
 };

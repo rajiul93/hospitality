@@ -1,6 +1,7 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { IoLocationOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 const CardOne = ({ item }) => {
   const {
@@ -21,14 +22,14 @@ const CardOne = ({ item }) => {
     AOS.init();
 }, []);
   return (
-    <div data-aos="fade-up-right"  className="flex flex-col bg-white shadow rounded p-4 h-full ">
+    <div data-aos="fade-up-right"  className="flex flex-col bg-white shadow rounded p-4 h-full hover:shadow-2xl ">
       <div  className="flex flex-col max-w-lg  overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800 border h-full">
         <div className="space-y-2">
 
           <img
             src={image}
             alt=""
-            className="object-cover w-full mb-4 h-46  dark:bg-gray-500"
+            className="object-cover w-full mb-4 max-h-44  dark:bg-gray-500"
           />
 
           <div className="p-4">
@@ -54,7 +55,12 @@ const CardOne = ({ item }) => {
 
          <hr  className="border-slate-300  my-4 border "/>
         <div className="flex justify-between items-center p-4">
-        <h1 className="text-gray-500">{location}</h1>
+          
+      <div className='flex gap-3 items-center'>
+        <IoLocationOutline />
+      <h1 className="text-gray-500">{location}</h1>
+      </div>
+
        <Link to={`/details/${id}`}> <button className="border bg-[#4338ca] text-white px-6 py-2 rounded-full">View</button></Link>
         </div>
 

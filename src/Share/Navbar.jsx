@@ -29,7 +29,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="bg-base-100">
+    <div className="bg-base-100 z-10">
       <div className="navbar h-20  max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -51,12 +51,12 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box z-10 w-52"
             >
               {navItem}
             </ul>
           </div>
-          <a className=" text-2xl font-one text-primary">Elegant</a>
+          <a className=" text-2xl font-one text-primary">Voyage Vista</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItem}</ul>

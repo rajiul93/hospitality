@@ -10,7 +10,7 @@ const CardContainerOne = () => {
   }, []);
 
   return (
-    <div className="mt-14">
+    <div className="mt-28">
       <div className="text-center  max-w-2xl mx-auto">
         <h1 className="font-bold text-4xl mb-6">Recent Property For Rent</h1>
         <p>
@@ -18,7 +18,7 @@ const CardContainerOne = () => {
           blanditiis praesentium voluptatum deleniti atque corrupti quos dolores{" "}
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center  ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center mt-14 ">
         {data.map((item) => (
           <CardOne  key={item.id}  item={item}/>
         ))}

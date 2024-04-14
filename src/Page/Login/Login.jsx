@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa6";
 import { IoLogoGoogleplus, IoLogoTwitter } from "react-icons/io";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import Swal from 'sweetalert2';
 import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
   const { loginWithEmail,googleLogin ,user} = useContext(AuthContext);
@@ -19,7 +20,12 @@ const Login = () => {
     const { email, password } = data;
     loginWithEmail(email, password)
       .then(() => {
-        toast.success("Login Successfully ");
+        Swal.fire({
+          title: 'success',
+          text: 'Welcome Voyage Vista',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        })
       navigate(location?.state ? location.state : "/profile");
 
       })
@@ -32,6 +38,12 @@ const Login = () => {
     googleLogin()
     .then(() => {
       toast.success("Login Successfully ");
+      Swal.fire({
+        title: 'success',
+          text: 'Welcome Voyage Vista',
+          icon: 'success',
+          confirmButtonText: 'OK'
+      })
       navigate(location?.state ? location.state : "/profile");
     })
     .catch(() => {

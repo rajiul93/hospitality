@@ -60,9 +60,9 @@ const Profile = () => {
 </Helmet>
 <ToastContainer />
 
-    <div className="my-14 grid grid-cols-1 md:grid-cols-6">
-      <div className="col-span-2">
-        <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
+    <div className="m-6 grid md:gap-8 grid-cols-1 md:grid-cols-6 content-center">
+      <div className="col-span-2   w-full">
+        <div className="flex flex-col justify-center  p-6 shadow-md rounded-xl bg-white sm:px-12 dark:bg-gray-50 dark:text-gray-800">
           <img
             src={user.photoURL}
             alt=""
@@ -98,7 +98,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-4">
+      <div className="col-span-4 mt-14 md:mt-0">
         <div>
           <h1 data-aos="zoom-in-down" className="text-2xl font-bold font-one mb-8 text-primary">
             Welcome
