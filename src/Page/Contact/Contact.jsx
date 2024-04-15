@@ -1,9 +1,15 @@
+import { Helmet } from "react-helmet-async";
 import { CiLocationOn } from "react-icons/ci";
 import { LuPhoneCall } from "react-icons/lu";
 import { MdOutlineForwardToInbox } from "react-icons/md";
 const Contact = () => {
   return (
     <div className=" min-h-screen max-w-6xl  mx-auto bg-white">
+      <Helmet>
+    <title>
+    VoyageVista | Contact
+    </title>
+</Helmet>
           <h1 className="text-3xl my-14 font-bold text-center  max-w-48 mx-auto rounded-xl p-1 shadow-lg">Contact Us!</h1>
 
       <div className="hero-content flex-col lg:flex-row-reverse md:gap-6">
