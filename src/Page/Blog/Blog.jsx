@@ -1,6 +1,15 @@
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import BlogCard from "./BlogCard";
 
 const Blog = () => {
+  const [data, setData] = useState([])
+  useEffect(() => {
+    fetch('/data2.json')
+    .then(res=>res.json())
+    .then(data => setData(data))
+  }, [])
+  
   return (
     <div className="bg-[#e0f2fe]">
       <Helmet>
@@ -27,168 +36,29 @@ const Blog = () => {
                 February 19, 2021
               </span>
               <p>
-                Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est
-                in graece fuisset, eos affert putent doctus id.
+                City Center Motel offers an affordable and convenient stay in
+                the heart of the city, providing travelers with comfortable
+                accommodations and easy access to local attractions. The motel's
+                well-maintained rooms are equipped with essential amenities,
+                ensuring a pleasant and relaxing stay. Whether you're in town
+                for business or leisure, you'll appreciate the proximity to
+                shopping centers, restaurants, and entertainment venues. The
+                friendly staff at City Center Motel strives to deliver excellent
+                service, assisting guests with local recommendations and any
+                other needs they may have. On-site parking is available for
+                added convenience
               </p>
             </div>
           </a>
           <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50"
-              data-abc="true"
-            >
-              <img
-                role="presentation"
-                className="object-cover w-full rounded h-44 dark:bg-gray-500"
-                src="https://i.ibb.co/18JZRGv/66.jpg"
-              />
-              <div className="p-6 space-y-2">
-                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                  In usu laoreet repudiare legendos
-                </h3>
-                <span className="text-xs dark:text-gray-600">
-                  January 21, 2021
-                </span>
-                <p>
-                  Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
-                  neglegentur, ex has tantas percipit perfecto. At per tempor
-                  albucius perfecto, ei probatus consulatu patrioque mea, ei
-                  vocent delicata indoctum pri.
-                </p>
-              </div>
-            </a>
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50"
-              data-abc="true"
-            >
-              <img
-                role="presentation"
-                className="object-cover w-full rounded h-44 dark:bg-gray-500"
-                src="https://i.ibb.co/FwfWM4F/44.jpg"
-              />
-              <div className="p-6 space-y-2">
-                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                  In usu laoreet repudiare legendos
-                </h3>
-                <span className="text-xs dark:text-gray-600">
-                  January 22, 2021
-                </span>
-                <p>
-                  Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
-                  neglegentur, ex has tantas percipit perfecto. At per tempor
-                  albucius perfecto, ei probatus consulatu patrioque mea, ei
-                  vocent delicata indoctum pri.
-                </p>
-              </div>
-            </a>
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50"
-              data-abc="true"
-            >
-              <img
-                role="presentation"
-                className="object-cover w-full rounded h-44 dark:bg-gray-500"
-                src="https://i.ibb.co/9842YHv/5.jpg"
-              />
-              <div className="p-6 space-y-2">
-                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                  In usu laoreet repudiare legendos
-                </h3>
-                <span className="text-xs dark:text-gray-600">
-                  January 23, 2021
-                </span>
-                <p>
-                  Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
-                  neglegentur, ex has tantas percipit perfecto. At per tempor
-                  albucius perfecto, ei probatus consulatu patrioque mea, ei
-                  vocent delicata indoctum pri.
-                </p>
-              </div>
-            </a>
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block"
-              data-abc="true"
-            >
-              <img
-                role="presentation"
-                className="object-cover w-full rounded h-44 dark:bg-gray-500"
-                src="https://i.ibb.co/3F79CxX/33.jpg"
-              />
-              <div className="p-6 space-y-2">
-                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                  In usu laoreet repudiare legendos
-                </h3>
-                <span className="text-xs dark:text-gray-600">
-                  January 24, 2021
-                </span>
-                <p>
-                  Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
-                  neglegentur, ex has tantas percipit perfecto. At per tempor
-                  albucius perfecto, ei probatus consulatu patrioque mea, ei
-                  vocent delicata indoctum pri.
-                </p>
-              </div>
-            </a>
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block"
-              data-abc="true"
-            >
-              <img
-                role="presentation"
-                className="object-cover w-full rounded h-44 dark:bg-gray-500"
-                src="https://i.ibb.co/D52wth8/4.jpg"
-              />
-              <div className="p-6 space-y-2">
-                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                  In usu laoreet repudiare legendos
-                </h3>
-                <span className="text-xs dark:text-gray-600">
-                  January 25, 2021
-                </span>
-                <p>
-                  Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
-                  neglegentur, ex has tantas percipit perfecto. At per tempor
-                  albucius perfecto, ei probatus consulatu patrioque mea, ei
-                  vocent delicata indoctum pri.
-                </p>
-              </div>
-            </a>
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block"
-              data-abc="true"
-            >
-              <img
-                role="presentation"
-                className="object-cover w-full rounded h-44 dark:bg-gray-500"
-                src="https://i.ibb.co/FwfWM4F/44.jpg"
-              />
-              <div className="p-6 space-y-2">
-                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                  In usu laoreet repudiare legendos
-                </h3>
-                <span className="text-xs dark:text-gray-600">
-                  January 26, 2021
-                </span>
-                <p>
-                  Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
-                  neglegentur, ex has tantas percipit perfecto. At per tempor
-                  albucius perfecto, ei probatus consulatu patrioque mea, ei
-                  vocent delicata indoctum pri.
-                </p>
-              </div>
-            </a>
+       
+            {
+              data.map(item=><BlogCard item={item} key={item.id}/>)
+            }
+           
+           
+           
+       
           </div>
           <div className="flex justify-center">
             <button

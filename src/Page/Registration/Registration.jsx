@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { IoLogoGoogleplus, IoLogoTwitter } from "react-icons/io";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { app } from "../../Firebase/firebase.config";
@@ -224,14 +224,13 @@ const Registration = () => {
 
         <p className="text-xs text-center mb-4 sm:px-6 dark:text-gray-600">
           Dont have an account?
-          <a
-            rel="noopener noreferrer"
-            href="#"
+          <Link
+           to='/login'
             className="underline dark:text-gray-800"
             data-abc="true"
           >
             Sign up
-          </a>
+          </Link>
         </p>
       </div>
     </div>

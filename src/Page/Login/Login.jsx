@@ -1,6 +1,6 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { IoLogoGoogleplus, IoLogoTwitter } from "react-icons/io";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -10,6 +10,7 @@ const Login = () => {
   const { loginWithEmail,googleLogin ,user,loginWithGitHub} = useContext(AuthContext);
   const navigate = useNavigate()
   const location = useLocation()
+  const [shadow, setShadow] = useState(false)
   const {
     register,
     handleSubmit,
@@ -89,17 +90,23 @@ const gitLogin =()=>{
             />
             {errors.email && <p>Last name is required.</p>}
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
             <input
               {...register("password", { required: true })}
-              type="password"
+              type={shadow?"text":"password"}
               placeholder="password"
               className="input input-bordered"
               required
             />
+            {!shadow? <FaRegEyeSlash 
+            onClick={()=>setShadow(!shadow)}
+            className="absolute top-14 right-8 cursor-pointer" />:
+            <FaRegEye 
+            onClick={()=>setShadow(!shadow)}
+            className="absolute top-14 right-8 cursor-pointer"/>}
             {errors.password && <p>Please enter number for age.</p>}
             <label className="label">
               <a href="#" className="label-text-alt link link-hover">

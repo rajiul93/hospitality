@@ -73,17 +73,17 @@ const Profile = () => {
           />
           <div className="space-y-4   divide-y dark:divide-gray-300">
             <div className="my-2 space-y-3">
-              <h2 className="text-xl font-semibold text-center  sm:text-2xl text-warning">
+              <h2 className="text-xl font-bold text-center  sm:text-2xl text-warning">
                 {user.displayName}
               </h2>
               <p className="px-5 text-xs sm:text-base dark:text-gray-600">
                 Full-stack developer
               </p>
               <p className="px-5 text-left text-xs sm:text-base dark:text-gray-600">
-               Email: <br /> {user.email}
+               <span className="font-bold">Email</span>: <br /> {user.email}
               </p>
               <div className="px-5 text-left text-xs sm:text-base dark:text-gray-600 ">
-                PhotoURL: <p className="overflow-x-auto overflow-y-auto">{user.photoURL}</p>
+                <span className="font-bold">PhotoURL</span>: <p className="overflow-x-auto overflow-y-auto">{user.photoURL}</p>
               </div>
               {show ? (
                 <p
@@ -124,7 +124,7 @@ const Profile = () => {
         </div>
 
         <div className="bg-white rounded p-4 mt-14">
-          <h1 className="text-2xl mt-8">Update Profile</h1>
+          <h1 className="text-2xl mt-8 font-bold">Update Profile</h1>
           <form   onSubmit={updateUserName} className="flex gap-3 mt-4">
             <label className="input input-bordered flex items-center gap-2">
               <input
@@ -134,7 +134,7 @@ const Profile = () => {
                 placeholder="Name"
               />
             </label>
-            <button type="submit" className="btn text-primary hover:text-white hover:bg-primary">
+            <button type="submit" className="btn text-primary rounded-none font-bold hover:text-white hover:bg-warning">
               Update Name
             </button>
           </form>
@@ -142,7 +142,7 @@ const Profile = () => {
             <label className="input input-bordered flex items-center gap-2">
               <input name="image" type="text" className="grow" placeholder="photoURL" />
             </label>
-            <button type="submit" className="btn text-primary hover:text-white hover:bg-primary ">Update Image</button>
+            <button type="submit" className="btn text-primary rounded-none hover:text-white hover:bg-warning ">Update Image</button>
           </form>
         </div>
       </div>

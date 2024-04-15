@@ -121,7 +121,7 @@ const Navbar = () => {
               <Link
                 to="/login"
                 onClick={handleLogOut}
-                className="btn ml-2 btn-warning"
+                className="btn rounded-none ml-2 btn-warning"
               >
                 Sin Out
               </Link>
@@ -129,7 +129,7 @@ const Navbar = () => {
           )}
 
           {!user && (
-            <Link to="/login" className="btn btn-primary">
+            <Link to="/login" className="btn rounded-none btn-warning">
               Login
             </Link>
           )}
