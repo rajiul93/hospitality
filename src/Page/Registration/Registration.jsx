@@ -13,7 +13,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from 'sweetalert2';
 const Registration = () => {
   const auth = getAuth(app);
-  const { googleLogin, user, createWithEmailPassword ,loginWithGitHub} = useContext(AuthContext);
+  const { googleLogin, twitterLogin, createWithEmailPassword ,loginWithGitHub} = useContext(AuthContext);
 
   const navigate = useNavigate()
   const location = useLocation()
@@ -96,6 +96,23 @@ const Registration = () => {
       toast.warn("something wrong github");
     });
   
+  }
+
+  const tLogin =()=>{
+    twitterLogin()
+    .then(() => {
+      toast.success("Login Successfully ");
+      Swal.fire({
+        title: 'success',
+          text: 'Welcome Voyage Vista',
+          icon: 'success',
+          confirmButtonText: 'OK'
+      })
+      navigate(location?.state ? location.state : "/profile");
+    })
+    .catch(() => {
+      toast.warn("something wrong github");
+    });
   }
   return (
     <div className="w-full max-w-xl mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 font-one">
@@ -214,7 +231,7 @@ const Registration = () => {
           >
             <IoLogoGoogleplus className="text-2xl" />
           </button>
-          <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
+          <button onClick={tLogin} aria-label="Log in with Twitter" className="p-3 rounded-sm">
             <IoLogoTwitter className="text-2xl" />
           </button>
           <button onClick={gitLogin} aria-label="Log in with GitHub" className="p-3 rounded-sm">

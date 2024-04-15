@@ -63,7 +63,7 @@ const Profile = () => {
 </Helmet>
 <ToastContainer />
 
-    <div className="m-6 max-w-6xl mx-auto grid md:gap-8 grid-cols-1 md:grid-cols-6 content-center">
+    <div className="m-6 p-2 max-w-6xl mx-auto grid md:gap-8 grid-cols-1 md:grid-cols-6 content-center">
       <div className="col-span-2   w-full">
         <div className="flex flex-col justify-center  p-4 shadow-md rounded-xl bg-white sm:px-12 dark:bg-gray-50 dark:text-gray-800">
           <img

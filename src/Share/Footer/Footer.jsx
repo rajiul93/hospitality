@@ -1,30 +1,24 @@
 import { FaGithub } from "react-icons/fa6";
 import { IoLogoGoogleplus } from "react-icons/io";
 import { IoLogoTwitter } from "react-icons/io5";
-import { Link } from "react-router-dom";
 
  
 
 const Footer = () => {
     return (
-      <footer className="footer text-black footer-center p-10 bg-white ">
+      <footer className="max-w-6xl mx-auto footer p-10  text-neutral-content">
       <aside>
-      <Link to='/'>
-          <img className="max-h-14 rounded-lg" src="https://i.ibb.co/sRZcCdG/logo.jpg" alt="" />
-          </Link>
-        <p className="font-bold">
-        Voyage Vista. <br/>Providing reliable tech since 1992
-        </p> 
-        <p>Copyright © 2024 - All right reserved</p>
+       <img width={100} src="https://i.ibb.co/sRZcCdG/logo.jpg" alt="" />
+        <p>Voyage Vistas Ltd.<br/>Providing reliable tech since 1998</p>
       </aside> 
       <nav>
-        <div className="grid grid-flow-col gap-4">
-        <IoLogoGoogleplus className="text-2xl" />
-        <IoLogoTwitter className="text-2xl" />
+        <h6 className="footer-title">Social</h6> 
+        <div className="grid grid-flow-col gap-4 text-4xl">
+          <IoLogoGoogleplus/>
+          <IoLogoTwitter/>
+          <FaGithub/>
 
-        <FaGithub className="text-2xl" />
-
- </div>
+             </div>
       </nav>
     </footer>
     );
