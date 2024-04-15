@@ -65,23 +65,26 @@ const Profile = () => {
 
     <div className="m-6 max-w-6xl mx-auto grid md:gap-8 grid-cols-1 md:grid-cols-6 content-center">
       <div className="col-span-2   w-full">
-        <div className="flex flex-col justify-center  p-6 shadow-md rounded-xl bg-white sm:px-12 dark:bg-gray-50 dark:text-gray-800">
+        <div className="flex flex-col justify-center  p-4 shadow-md rounded-xl bg-white sm:px-12 dark:bg-gray-50 dark:text-gray-800">
           <img
             src={user.photoURL}
             alt=""
             className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
           />
-          <div className="space-y-4 text-center divide-y dark:divide-gray-300">
-            <div className="my-2 space-y-1">
-              <h2 className="text-xl font-semibold font-one sm:text-2xl text-primary">
+          <div className="space-y-4   divide-y dark:divide-gray-300">
+            <div className="my-2 space-y-3">
+              <h2 className="text-xl font-semibold text-center  sm:text-2xl text-warning">
                 {user.displayName}
               </h2>
               <p className="px-5 text-xs sm:text-base dark:text-gray-600">
                 Full-stack developer
               </p>
-              <p className="px-5 text-xs sm:text-base dark:text-gray-600">
-                {user.email}
+              <p className="px-5 text-left text-xs sm:text-base dark:text-gray-600">
+               Email: <br /> {user.email}
               </p>
+              <div className="px-5 text-left text-xs sm:text-base dark:text-gray-600 ">
+                PhotoURL: <p className="overflow-x-auto overflow-y-auto">{user.photoURL}</p>
+              </div>
               {show ? (
                 <p
                   onClick={() => setShow(!show)}
@@ -103,7 +106,7 @@ const Profile = () => {
       </div>
       <div className="col-span-4 mt-14 md:mt-0">
         <div>
-          <h1 data-aos="zoom-in-down" className="text-2xl font-bold font-one mb-8 text-primary">
+          <h1 data-aos="zoom-in-down" className="text-2xl font-bold font-one mb-8 text-warning">
             Welcome
           </h1>
           <p className="">
