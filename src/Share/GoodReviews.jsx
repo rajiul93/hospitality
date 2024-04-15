@@ -1,16 +1,18 @@
+import 'aos/dist/aos.css';
+
 const GoodReviews = () => {
   return (
-    <div className="mt-28">
+    <div className="mt-14">
       <div>
         <div className="text-center  max-w-2xl mx-auto">
-          <h1 className="font-bold text-4xl mb-6">Good Reviews by Customers</h1>
-          <p>
+          <h1  data-aos="fade-up-right" className="font-bold text-4xl mb-6">Good Reviews by Customers</h1>
+          <p data-aos="fade-up-right" >
           At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores 
           </p>
         </div>
       </div>
 
-      <div className="grid gri  md:grid-cols-2 lg:grid-cols-3 gap-6 my-14">
+      <div data-aos="fade-up-right"  className="grid gri  md:grid-cols-2 lg:grid-cols-3 gap-6 my-14">
         <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md bg-white dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
           <div className="flex justify-between p-4">
             <div className="flex space-x-4">

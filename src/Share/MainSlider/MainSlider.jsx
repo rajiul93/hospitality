@@ -1,4 +1,5 @@
 import 'animate.css';
+import { Link } from 'react-router-dom';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -9,7 +10,7 @@ import "./MainSlider.css";
 const MainSlider = () => {
   
   return (
-    <div className="z-1 MainSliderBody md:mt-14 rounded-2xl overflow-hidden font-one">
+    <div className="z-1 MainSliderBody  rounded-2xl overflow-hidden font-one">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -40,7 +41,7 @@ const MainSlider = () => {
                   assumenda excepturi exercitationem quasi. In deleniti eaque
                   aut repudiandae et a id nisi.
                 </p>
-                <button  className="btn btn-primary  ">Visit Now</button>
+                <Link to='/details/4'><button  className="btn btn-primary  ">Visit Now</button></Link>
               </div>
             </div>
           </div>
@@ -50,17 +51,16 @@ const MainSlider = () => {
             <div    className="hero-content flex-col lg:flex-row-reverse p-2">
               <img
                 src="https://i.ibb.co/9842YHv/5.jpg"
-                className="z-1 md:max-w-xl h-26 rounded-lg shadow-2xl animate__animated animate__swing"
+                className="z-1 md:max-w-xl h-26 rounded-lg shadow-2xl "
               />
               <div className="text-start">
-              <h1 className="lg:text-5xl font-bold font-one animate__animated animate__swing  text-white">Find Your Place <br /> of Dream </h1>
-              <p className="py-6  max-w-xl animate__animated animate__backInLeft animate__delay-2s main-font text-white">
+              <h1 className="lg:text-5xl font-bold font-one   text-white">Find Your Place <br /> of Dream </h1>
+              <p className="py-6  max-w-xl   main-font text-white">
                   Provident cupiditate voluptatem et in. Quaerat fugiat ut
                   assumenda excepturi exercitationem quasi. In deleniti eaque
                   aut repudiandae et a id nisi.
                 </p>
-                <button  className="btn btn-primary">Visit Now</button>
-
+                <Link to='/details/5'><button  className="btn btn-primary  ">Visit Now</button></Link>
               </div>
             </div>
           </div>
@@ -70,17 +70,18 @@ const MainSlider = () => {
             <div     className="hero-content flex-col  lg:flex-row-reverse">
               <img
                 src="https://i.ibb.co/dLTD8qd/55.jpg"
-                className="md:max-w-xl h-24 rounded-lg shadow-2xl animate__animated animate__swing"
+                className="md:max-w-xl h-24 rounded-lg shadow-2xl "
               />
               <div className="text-start">
-              <h1 className="lg:text-5xl font-bold font-one animate__animated animate__swing  text-white">Find Your Place <br /> of Dream </h1>
+              <h1 className="lg:text-5xl font-bold font-one   text-white">Find Your Place <br /> of Dream </h1>
 
-              <p className="py-6  max-w-xl animate__animated animate__backInLeft animate__delay-2s main-font text-white">
+              <p className="py-6  max-w-xl    main-font text-white">
                   Provident cupiditate voluptatem et in. Quaerat fugiat ut
                   assumenda excepturi exercitationem quasi. In deleniti eaque
                   aut repudiandae et a id nisi.
                 </p>
-                <button className="btn btn-primary">Visit Now</button>
+                <Link to='/details/3'><button  className="btn btn-primary  ">Visit Now</button></Link>
+
 
               </div>
             </div>

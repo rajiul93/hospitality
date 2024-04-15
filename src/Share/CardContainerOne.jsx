@@ -1,6 +1,6 @@
+import 'aos/dist/aos.css';
 import { useEffect, useState } from "react";
 import CardOne from "./CardOne";
-
 const CardContainerOne = () => {
   const [data, setdata] = useState([]);
   useEffect(() => {
@@ -10,10 +10,10 @@ const CardContainerOne = () => {
   }, []);
 
   return (
-    <div className="mt-28">
+    <div className="mt-14">
       <div className="text-center  max-w-2xl mx-auto">
-        <h1 className="font-bold text-4xl mb-6">Recent Property For Rent</h1>
-        <p>
+        <h1 data-aos="fade-up-right" className="font-bold text-4xl mb-6">Recent Property For Rent</h1>
+        <p data-aos="fade-up-right">
           At vero eos et accusamus et iusto odio dignissimos ducimus qui
           blanditiis praesentium voluptatum deleniti atque corrupti quos dolores{" "}
         </p>

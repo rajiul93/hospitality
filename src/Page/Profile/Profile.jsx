@@ -4,9 +4,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import { AuthContext } from "../../Provider/AuthProvider";
 const Profile = () => {
     // const auth = getAuth(app);
-  const { user, updateName,updatePhoto, setUser } = useContext(AuthContext);
+  const { user, updateName,updatePhoto, setUser, loader } = useContext(AuthContext);
   const [show, setShow] = useState(false);
 
+  if (loader) {
+    return <div className="h-screen flex justify-center items-center"><span className="loading loading-spinner w-14 text-warning"></span></div>
+  }
 
   const updateUserName = async (e) => {
     e.preventDefault();
@@ -52,7 +55,7 @@ const Profile = () => {
   
   return (
 
-<>
+<div className="bg-[#e0f2fe] py-14">
 <Helmet>
     <title>
     VoyageVista | Profile
@@ -60,7 +63,7 @@ const Profile = () => {
 </Helmet>
 <ToastContainer />
 
-    <div className="m-6 grid md:gap-8 grid-cols-1 md:grid-cols-6 content-center">
+    <div className="m-6 max-w-6xl mx-auto grid md:gap-8 grid-cols-1 md:grid-cols-6 content-center">
       <div className="col-span-2   w-full">
         <div className="flex flex-col justify-center  p-6 shadow-md rounded-xl bg-white sm:px-12 dark:bg-gray-50 dark:text-gray-800">
           <img
@@ -117,9 +120,9 @@ const Profile = () => {
           </p>
         </div>
 
-        <div >
-          <h1 data-aos-delay="200"  data-aos="fade-up-right" className="text-2xl mt-8">Update Profile</h1>
-          <form data-aos-delay="250"  data-aos="fade-up-right"  onSubmit={updateUserName} className="flex gap-3 mt-4">
+        <div className="bg-white rounded p-4 mt-14">
+          <h1 className="text-2xl mt-8">Update Profile</h1>
+          <form   onSubmit={updateUserName} className="flex gap-3 mt-4">
             <label className="input input-bordered flex items-center gap-2">
               <input
                 name="name"
@@ -132,7 +135,7 @@ const Profile = () => {
               Update Name
             </button>
           </form>
-          <form data-aos-delay="200"  data-aos="fade-up-right"  onSubmit={updateUserPhoto} className="flex gap-3 mt-4">
+          <form   onSubmit={updateUserPhoto} className="flex gap-3 mt-4">
             <label className="input input-bordered flex items-center gap-2">
               <input name="image" type="text" className="grow" placeholder="photoURL" />
             </label>
@@ -141,7 +144,7 @@ const Profile = () => {
         </div>
       </div>
     </div>
-</>
+</div>
 
   );
 };

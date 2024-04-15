@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
@@ -23,6 +22,9 @@ const Navbar = () => {
       <li>
         <NavLink to="/blog">Blog</NavLink>
       </li>
+      <li>
+        <NavLink to="/contact">Contact</NavLink>
+      </li>
       {user && <li>
         <NavLink to="/profile">Profile</NavLink>
       </li>}
@@ -30,7 +32,7 @@ const Navbar = () => {
   );
   return (
     <div className="bg-base-100 z-10">
-      <div className="navbar h-20  max-w-7xl mx-auto">
+      <div className="navbar h-20  max-w-6xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -51,12 +53,14 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box z-10 w-52"
+              className="menu menu-sm dropdown-content mt-3  p-2 shadow bg-base-100 rounded-box z-10 w-52"
             >
               {navItem}
             </ul>
           </div>
-          <a className=" text-2xl font-one text-primary">Voyage Vista</a>
+          <Link to='/'>
+          <img className="max-h-14 rounded-lg" src="https://i.ibb.co/sRZcCdG/logo.jpg" alt="" />
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItem}</ul>

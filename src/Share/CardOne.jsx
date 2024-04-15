@@ -33,7 +33,7 @@ const CardOne = ({ item }) => {
           />
 
           <div className="p-4">
-            <h1>{status}</h1>
+            <h1 className='text-red-500'>{status}</h1>
             <div className="flex justify-between">
               <h2 className="mb-1 text-2xl font-semibold">{estate_title}</h2>
               <h2 className="mb-1 text-2xl text-[#4338ca] font-semibold">

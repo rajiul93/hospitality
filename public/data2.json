@@ -1,82 +1,106 @@
 [
-   
-        {
-          "id": 1,
-          "category": "Hotel ",
-          "estate_title": "City Center Hotel",
-          "segment_name": "Standard Room",
-          "description": "Convenient and affordable accommodation in the heart of the city.",
-          "price": 80,
-          "status": "rent",
-          "area": "300 sq ft",
-          "location": "City Center",
-          "facilities": ["Free Wi-Fi", "Parking", "24-hour Front Desk"],
-          "image": "https://i.ibb.co/R4nj6JL/Motel-Nacht.webp"
-        }, 
-        {
-            "id": 2,
-            "category": "Motel",
-            "estate_title": "City Center Motel",
-            "segment_name": "Standard Room",
-            "description": "Convenient and affordable accommodation in the heart of the city.",
-            "price": 80,
-            "status": "rent",
-            "area": "300 sq ft",
-            "location": "City Center",
-            "facilities": ["Free Wi-Fi", "Parking", "24-hour Front Desk"],
-            "image": "https://i.ibb.co/nLySJ8R/istockphoto-102550404-612x612.jpg"
-          }, 
-        {
-          "id": 3,
-          "category": "Resort",
-          "estate_title": "Tropical Paradise Resort",
-          "segment_name": "Beachfront Villa",
-          "description": "Escape to a secluded paradise with stunning ocean views.",
-          "price": 500,
-          "status": "sale",
-          "area": "5000 sq ft",
-          "location": "Tropical Island",
-          "facilities": ["Private Beach Access", "Spa", "Outdoor Activities", "Restaurant"],
-          "image": "https://i.ibb.co/98GxgKS/3.jpg"
-        },
-        {
-          "id": 4,
-          "category": "Vacation",
-          "estate_title": "Beachfront Villa",
-          "segment_name": "Luxury Retreat",
-          "description": "Indulge in luxury with a private villa steps away from the beach.",
-          "price": 700,
-          "status": "rent",
-          "area": "4000 sq ft",
-          "location": "Coastal Area",
-          "facilities": ["Infinity Pool", "Private Chef", "Housekeeping", "Beach Access"],
-          "image": "https://i.ibb.co/D52wth8/4.jpg"
-        },
-        {
-          "id": 5,
-          "category": "Lodges",
-          "estate_title": "Forest Retreat Lodge",
-          "segment_name": "Secluded Cabin",
-          "description": "Immerse yourself in nature with a peaceful stay in the forest.",
-          "price": 300,
-          "status": "rent",
-          "area": "2000 sq ft",
-          "location": "Wooded Area",
-          "facilities": ["Nature Trails", "Campfire Area", "Wildlife Observation"],
-          "image": "https://i.ibb.co/9842YHv/5.jpg"
-        },
-        {
-          "id": 6,
-          "category": "Guesthouse",
-          "estate_title": "Downtown Guesthouse",
-          "segment_name": "Urban Retreat",
-          "description": "Experience urban living with comfort and convenience in this guesthouse.",
-          "price": 120,
-          "status": "rent",
-          "area": "1500 sq ft",
-          "location": "City Center",
-          "facilities": ["Shared Kitchen", "Common Lounge", "Free Wi-Fi"],
-          "image": "https://i.ibb.co/Xs1mq4B/6.jpg"
-        }
-  ]
-  
+  {
+    "id": 1,
+    "category": "Hotel ",
+    "estate_title": "City Center Hotel",
+    "segment_name": "Standard Room",
+    "description": "City Center Hotel is a premium destination for travelers seeking comfort, convenience, and elegance in the heart of the city. This upscale hotel features stylish rooms equipped with modern amenities, offering guests a cozy retreat from the bustling city life. The hotel's prime location provides easy access to popular attractions, shopping districts, and vibrant nightlife, making it an ideal base for exploring the city. City Center Hotel's exceptional dining options showcase local and international cuisines, delighting the palate with every meal. Guests can unwind at the hotel's rooftop bar, sipping craft cocktails while enjoying panoramic city views. For business travelers, state-of-the-art meeting rooms and conference facilities ensure a seamless experience for corporate events. The dedicated staff at City Center Hotel delivers impeccable service, ensuring each guest's stay is memorable and enjoyable. Whether you're visiting for business or pleasure, City Center Hotel is the perfect choice for a luxurious urban escape.",
+    "price": 80,
+    "status": "Rent",
+    "area": "300 sq ft",
+    "location": "City Center",
+    "facilities": [
+      "Free Wi-Fi",
+      "Parking",
+      "24-hour Front Desk"
+    ],
+    "image": "https://i.ibb.co/R4nj6JL/Motel-Nacht.webp"
+  },
+  {
+    "id": 2,
+    "category": "Motel",
+    "estate_title": "City Center Motel",
+    "segment_name": "Standard Room",
+    "description": "City Center Motel offers an affordable and convenient stay in the heart of the city, providing travelers with comfortable accommodations and easy access to local attractions. The motel's well-maintained rooms are equipped with essential amenities, ensuring a pleasant and relaxing stay. Whether you're in town for business or leisure, you'll appreciate the proximity to shopping centers, restaurants, and entertainment venues. The friendly staff at City Center Motel strives to deliver excellent service, assisting guests with local recommendations and any other needs they may have. On-site parking is available for added convenience, making it easy to explore the city and its surroundings. With its prime location and competitive rates, City Center Motel is an excellent choice for budget-conscious travelers seeking a comfortable and enjoyable stay in the city.",
+    "price": 80,
+    "status": "Rent",
+    "area": "300 sq ft",
+    "location": "City Center",
+    "facilities": [
+      "Free Wi-Fi",
+      "Parking",
+      "24-hour Front Desk"
+    ],
+    "image": "https://i.ibb.co/nLySJ8R/istockphoto-102550404-612x612.jpg"
+  },
+  {
+    "id": 3,
+    "category": "Resort",
+    "estate_title": "Tropical Paradise Resort",
+    "segment_name": "Beachfront Villa",
+    "description": "Tropical Paradise Resort is a stunning haven nestled in an idyllic beachside setting, offering guests an unforgettable escape to lush surroundings and crystal-clear waters. The resort features luxurious accommodations, including elegant villas and suites with breathtaking views of the ocean or tropical gardens. Each room is designed with a blend of modern comforts and traditional charm, providing a serene retreat for relaxation. Guests can indulge in a variety of world-class amenities, such as a rejuvenating spa, infinity pools, and private cabanas. Gourmet dining options showcase fresh, locally sourced ingredients, offering a taste of exotic flavors and international cuisine. A range of recreational activities, from water sports to guided excursions, caters to all interests and ages. The dedicated staff at Tropical Paradise Resort ensures a personalized experience, making every stay unique and memorable. Whether you're seeking adventure or tranquility, this tropical oasis promises an enchanting journey for all who visit.",
+    "price": 500,
+    "status": "Sale",
+    "area": "5000 sq ft",
+    "location": "Tropical Island",
+    "facilities": [
+      "Private Beach Access",
+      "Spa",
+      "Outdoor Activities",
+      "Restaurant"
+    ],
+    "image": "https://i.ibb.co/98GxgKS/3.jpg"
+  },
+  {
+    "id": 4,
+    "category": "Vacation",
+    "estate_title": "Beachfront Villa",
+    "segment_name": "Luxury Retreat",
+    "description": " Luxury Retreat offers an unparalleled experience of opulence and relaxation. Nestled in breathtaking natural surroundings, this resort boasts exquisite accommodations that blend modern sophistication with timeless elegance. Guests can indulge in world-class amenities, including a serene spa, gourmet dining, and a private beach. Personalized service ensures every need is met with warmth and precision. Recreational activities range from water sports to guided tours, providing entertainment for every interest. As the sun sets, enjoy stunning views from the comfort of your private suite. At Luxury Retreat, immerse yourself in a world of luxury and tranquility for a truly unforgettable escape.",
+    "price": 700,
+    "status": "Rent",
+    "area": "4000 sq ft",
+    "location": "Coastal Area",
+    "facilities": [
+      "Infinity Pool",
+      "Private Chef",
+      "Housekeeping",
+      "Beach Access"
+    ],
+    "image": "https://i.ibb.co/D52wth8/4.jpg"
+  },
+  {
+    "id": 5,
+    "category": "Lodges",
+    "estate_title": "Forest Retreat Lodge",
+    "segment_name": "Secluded Cabin",
+    "description": "Immerse yourself in nature with a peaceful stay in the forest.",
+    "price": 300,
+    "status": "Rent",
+    "area": "2000 sq ft",
+    "location": "Wooded Area",
+    "facilities": [
+      "Nature Trails",
+      "Campfire Area",
+      "Wildlife Observation"
+    ],
+    "image": "https://i.ibb.co/9842YHv/5.jpg"
+  },
+  {
+    "id": 6,
+    "category": "Guesthouse",
+    "estate_title": "Downtown Guesthouse",
+    "segment_name": "Urban Retreat",
+    "description": "Experience urban living with comfort and convenience in this guesthouse.",
+    "price": 120,
+    "status": "Rent",
+    "area": "1500 sq ft",
+    "location": "City Center",
+    "facilities": [
+      "Shared Kitchen",
+      "Common Lounge",
+      "Free Wi-Fi"
+    ],
+    "image": "https://i.ibb.co/Xs1mq4B/6.jpg"
+  }
+]
