@@ -10,6 +10,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 
+import { TwitterAuthProvider } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { app } from "../Firebase/firebase.config";
 
@@ -17,12 +18,15 @@ export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   const gitHubProvider = new GithubAuthProvider();
+  const twitterProvider  = new TwitterAuthProvider()
 
   const auth = getAuth(app);
   const googleProvider = new GoogleAuthProvider();
   const [user, setUser] = useState({});
   const [loader, setLoader] = useState(true) 
-
+const twitterLogin =()=>{
+  return signInWithPopup(auth, twitterProvider)
+}
   const googleLogin = () => {
     setLoader(true)
 
@@ -77,7 +81,7 @@ const AuthProvider = ({ children }) => {
     updateName,
     updatePhoto,
     loginWithGitHub,
-    loader
+    loader,twitterLogin
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

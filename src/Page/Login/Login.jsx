@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Swal from 'sweetalert2';
 import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
-  const { loginWithEmail,googleLogin ,user,loginWithGitHub} = useContext(AuthContext);
+  const { loginWithEmail,googleLogin ,twitterLogin,loginWithGitHub} = useContext(AuthContext);
   const navigate = useNavigate()
   const location = useLocation()
   const [shadow, setShadow] = useState(false)
@@ -70,6 +70,22 @@ const gitLogin =()=>{
 
 }
 
+const tLogin =()=>{
+  twitterLogin()
+  .then(() => {
+    toast.success("Login Successfully ");
+    Swal.fire({
+      title: 'success',
+        text: 'Welcome Voyage Vista',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    })
+    navigate(location?.state ? location.state : "/profile");
+  })
+  .catch(() => {
+    toast.warn("something wrong github");
+  });
+}
   return (
     <div className="w-full max-w-xl mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 font-one">
       <ToastContainer />
@@ -129,7 +145,7 @@ const gitLogin =()=>{
           <button onClick={handleGoogleLogin} aria-label="Log in with Google" className="p-3 rounded-sm">
             <IoLogoGoogleplus className="text-2xl" />
           </button>
-          <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
+          <button onClick={tLogin} aria-label="Log in with Twitter" className="p-3 rounded-sm">
             <IoLogoTwitter className="text-2xl" />
           </button>
           <button onClick={gitLogin} aria-label="Log in with GitHub" className="p-3 rounded-sm">

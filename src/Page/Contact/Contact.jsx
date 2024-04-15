@@ -6,10 +6,10 @@ const Contact = () => {
     <div className=" min-h-screen max-w-6xl  mx-auto bg-white">
           <h1 className="text-3xl my-14 font-bold text-center  max-w-48 mx-auto rounded-xl p-1 shadow-lg">Contact Us!</h1>
 
-      <div className="hero-content flex-col lg:flex-row-reverse gap-6">
+      <div className="hero-content flex-col lg:flex-row-reverse md:gap-6">
         <div className="text-center lg:text-left w-2/4 shrink-0  ">
           <div className="  ">
-            <table className="table mt-4">
+            <table className="md:table  mt-4">
               {/* head */}
 
               <tbody>
@@ -55,12 +55,11 @@ const Contact = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Password</span>
+                <span className="label-text">Message</span>
               </label>
-              <input
-                type="password"
-                placeholder="password"
-                className="input input-bordered"
+              <textarea 
+             className="textarea textarea-bordered"
+             placeholder="Bio"
                 required
               />
               <label className="label">
