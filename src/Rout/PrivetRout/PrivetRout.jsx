@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
@@ -13,3 +14,6 @@ const PrivetRout = ({children}) => {
 };
 
 export default PrivetRout;
+PrivetRout.propTypes = {
+    children: PropTypes.node
+    }

@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut ,loader} = useContext(AuthContext);
+
   const handleLogOut = () => {
     logOut()
       .then(() => {
@@ -44,17 +45,17 @@ const Navbar = () => {
           Contact
         </NavLink>
       </li>
-      {user && (
+      {!user ? "":
         <li>
           <NavLink
             className={({ isActive,   }) => isActive ? "text-warning font-bold" : " bg-white   font-bold"
             }
             to="/profile"
           >
-            Profile
+            {!loader && "Profile"}
           </NavLink>
         </li>
-      )}
+      }
     </>
   );
   return (
@@ -97,9 +98,8 @@ const Navbar = () => {
           <ul className=" flex gap-6 px-1">{navItem}</ul>
         </div>
         <div className="navbar-end">
-          {user && (
-            <>
-              {user?.photoURL ? (
+        
+              {loader?<span className="loading loading-ring loading-lg"></span>: user?.photoURL && 
                 <Link
                   to="/profile"
                   className="tooltip hover:tooltip-open tooltip-bottom"
@@ -111,22 +111,17 @@ const Navbar = () => {
                     alt=""
                   />
                 </Link>
-              ) : (
-                <img
-                  className="w-12 h-12 rounded-full border-spacing-2  border border-r-cyan-700"
-                  src="https://i.ibb.co/98GxgKS/3.jpg"
-                  alt=""
-                />
-              )}
-              <Link
-                to="/login"
-                onClick={handleLogOut}
-                className="btn rounded-none ml-2 btn-warning"
-              >
-                Sin Out
-              </Link>
-            </>
-          )}
+              }
+
+
+            {  user && <Link
+              to="/login"
+              onClick={handleLogOut}
+              className="btn rounded-none ml-2 btn-warning"
+            >
+              Sin Out
+            </Link> }
+           
 
           {!user && (
             <Link to="/login" className="btn rounded-none btn-warning">

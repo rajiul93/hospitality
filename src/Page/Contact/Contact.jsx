@@ -12,25 +12,23 @@ const Contact = () => {
 </Helmet>
           <h1 className="text-3xl my-14 font-bold text-center  max-w-48 mx-auto rounded-xl p-1 shadow-lg">Contact Us!</h1>
 
-      <div className="hero-content flex-col lg:flex-row-reverse md:gap-6">
-        <div className="text-center lg:text-left w-2/4 shrink-0  ">
+      <div className="hero-content justify-center flex-col lg:flex-row-reverse md:gap-6">
+        <div className="text-center flex justify-center lg:text-left w-full md:w-2/4 shrink-0  ">
           <div className="  ">
             <table className="md:table  mt-4">
-              {/* head */}
+ 
 
-              <tbody>
-                {/* row 1 */}
+              <tbody > 
                 <tr className="text-xl">
-                  <td className="flex gap-3 items-center">
+                  <td className="flex gap-3  items-center">
                     <MdOutlineForwardToInbox />
                     Email:
                   </td>
                   <td>rajiulrayhan@gamil.com</td>
-                </tr>
-                {/* row 2 */}
+                </tr> 
                 <tr className="text-xl">
                   <td className="flex gap-3 items-center">
-                    {" "}
+              
                     <LuPhoneCall /> Phone
                   </td>
                   <td>+88 01986570093</td>
@@ -46,6 +44,8 @@ const Contact = () => {
             </table>
           </div>
         </div>
+
+
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form className="card-body">
             <div className="form-control">

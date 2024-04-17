@@ -77,7 +77,7 @@ const Registration = () => {
       navigate(location?.state ? location.state : "/profile");
     })
     .catch(() => {
-      toast.warn("something wrong github");
+      // toast.warn("something wrong github");
     });
   };
   const gitLogin =()=>{

@@ -7,10 +7,12 @@ const Profile = () => {
   const { user, updateName,updatePhoto, setUser, loader } = useContext(AuthContext);
   const [show, setShow] = useState(false);
 
+  console.log(loader)
+  
   if (loader) {
     return <div className="h-screen flex justify-center items-center"><span className="loading loading-spinner w-14 text-warning"></span></div>
   }
-
+ 
   const updateUserName = async (e) => {
     e.preventDefault();
     const name =  e.target.name.value;

@@ -48,7 +48,7 @@ const Login = () => {
       navigate(location?.state ? location.state : "/profile");
     })
     .catch(() => {
-      toast.warn("You have wrong password");
+      // toast.warn("You have wrong password");
     });
   } 
 

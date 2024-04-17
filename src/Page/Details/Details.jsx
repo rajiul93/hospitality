@@ -4,7 +4,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 const Details = () => {
 
-  const {loader,user} = useContext(AuthContext);
+  const {loader} = useContext(AuthContext);
   
   const { id } = useParams();
   const data = useLoaderData();

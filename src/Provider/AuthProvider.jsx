@@ -1,6 +1,7 @@
 import {
   GithubAuthProvider,
   GoogleAuthProvider,
+  TwitterAuthProvider,
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
@@ -9,8 +10,7 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
-
-import { TwitterAuthProvider } from "firebase/auth";
+import PropTypes from 'prop-types';
 import { createContext, useEffect, useState } from "react";
 import { app } from "../Firebase/firebase.config";
 
@@ -89,3 +89,6 @@ const twitterLogin =()=>{
 };
 
 export default AuthProvider;
+AuthProvider.propTypes = {
+children: PropTypes.node
+}
