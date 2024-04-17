@@ -2,7 +2,22 @@ import { Helmet } from "react-helmet-async";
 import { CiLocationOn } from "react-icons/ci";
 import { LuPhoneCall } from "react-icons/lu";
 import { MdOutlineForwardToInbox } from "react-icons/md";
+import Swal from 'sweetalert2';
+
 const Contact = () => {
+
+  const sendMail =(e)=>{
+    e.preventDefault() 
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Your message message been send",
+      showConfirmButton: false,
+      timer: 1500
+    });
+  }
+
+
   return (
     <div className=" min-h-screen max-w-6xl  mx-auto bg-white">
       <Helmet>
@@ -47,7 +62,7 @@ const Contact = () => {
 
 
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <form className="card-body">
+          <form onSubmit={sendMail} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -55,6 +70,7 @@ const Contact = () => {
               <input
                 type="email"
                 placeholder="email"
+                name="email"
                 className="input input-bordered"
                 required
               />
@@ -64,6 +80,7 @@ const Contact = () => {
                 <span className="label-text">Message</span>
               </label>
               <textarea 
+              name="message"
              className="textarea textarea-bordered"
              placeholder="Bio"
                 required

@@ -157,7 +157,7 @@ const tLogin =()=>{
           <Link
             rel="noopener noreferrer"
             to="/registration"
-            className="underline dark:text-gray-800"
+            className="underline ms-2 dark:text-gray-800"
             data-abc="true"
           >
             Sign up

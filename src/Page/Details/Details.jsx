@@ -1,7 +1,10 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
+import { CiCalendar } from "react-icons/ci";
 import { useLoaderData, useParams } from "react-router-dom";
+import Swal from 'sweetalert2';
 import { AuthContext } from "../../Provider/AuthProvider";
+
 const Details = () => {
 
   const {loader} = useContext(AuthContext);
@@ -25,6 +28,30 @@ const Details = () => {
     image,
     segment_name,
   } = singleData;
+
+
+const confirmForm =(e)=>{
+  e.preventDefault()
+  const name = e.target.name.value;
+  const date =e.target.date.value
+  Swal.fire({
+    title: `<strong>Hi <u>${name}</u></strong>`,
+    
+    html: `
+    <h1> conformation date: ${date}</h1>
+      Our representative team will  <b>Contact</b>,
+      with you
+    `,
+    showCloseButton: true,
+    showCancelButton: true,
+    focusConfirm: false,
+    confirmButtonText: `
+      <i class="fa fa-thumbs-up"></i> Great!
+    `,
+    confirmButtonAriaLabel: "Thumbs up, great!",
+  
+  });
+}
 
   return (
     <div className="bg-[#e0f2fe]">
@@ -89,9 +116,10 @@ const Details = () => {
           </div>
           <div className="lg:col-span-2 rounded-2xl p-2 md:p-6 mt-14 bg-white shadow-2xl ">
             <h1 className="text-2xl font-semibold mb-4">Book Now{}</h1>
-            <div className="space-y-3">
+
+            <form onSubmit={confirmForm} className="space-y-3">
               <label className="input input-bordered flex items-center gap-2">
-                <input type="text" className="grow" placeholder="Full Name" />
+                <input name="name" type="text" className="grow" required placeholder="Full Name" />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -106,27 +134,21 @@ const Details = () => {
                 </svg>
               </label>
               <label className="input input-bordered flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 16"
-                  fill="currentColor"
-                  className="w-4 h-4 opacity-70"
-                >
-                  <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
-                  <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
-                </svg>
-                <input type="date" className="grow" placeholder="Email" />
+              <CiCalendar />
+                <input name="date" type="date" className="grow" required  />
               </label>
               <textarea
+              name="description"
                 className="textarea textarea-bordered w-full"
                 placeholder="Bio"
               ></textarea>
               <input
                 type="submit"
                 value="Confirmed "
-                className="btn btn-active btn-primary"
+                className="btn btn-warning btn-primary"
               />
-            </div>
+            </form>
+            
           </div>
         </div>
 

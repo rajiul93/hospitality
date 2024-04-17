@@ -243,7 +243,7 @@ const Registration = () => {
           Dont have an account?
           <Link
            to='/login'
-            className="underline dark:text-gray-800"
+            className="underline dark:text-gray-800 ms-2"
             data-abc="true"
           >
             Sign up
