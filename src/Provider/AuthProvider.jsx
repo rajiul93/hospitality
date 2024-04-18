@@ -28,23 +28,23 @@ const twitterLogin =()=>{
   return signInWithPopup(auth, twitterProvider)
 }
   const googleLogin = () => {
-    setLoader(true)
+    // setLoader(true)
 
     return signInWithPopup(auth, googleProvider);
   };
   const loginWithGitHub = () => {
-    setLoader(true)
+    // setLoader(true)
 
     return signInWithPopup(auth, gitHubProvider);
   };
   const createWithEmailPassword = (email, password) => {
-    setLoader(true)
+    // setLoader(true)
 
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const loginWithEmail = (email, password) => {
-    setLoader(true)
+    // setLoader(true)
 
     return signInWithEmailAndPassword(auth, email, password);
   };
@@ -63,6 +63,7 @@ const twitterLogin =()=>{
   };
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (user) => {
+      setLoader(true)
       setUser(user);
       setLoader(false)
     });
